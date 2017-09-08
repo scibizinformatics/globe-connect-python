@@ -1,6 +1,9 @@
 # Globe Oauth API
 import pycurl, json, os
-from StringIO import StringIO as BytesIO
+try:
+    from StringIO import StringIO as BytesIO
+except ImportError:
+    from io import StringIO as BytesIO
 
 # GLOBAL SECTION
 # request endpoints

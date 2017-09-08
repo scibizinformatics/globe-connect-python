@@ -2,7 +2,10 @@
 
 # import section
 import pycurl, json
-from StringIO import StringIO as BytesIO
+try:
+    from StringIO import StringIO as BytesIO
+except ImportError:
+    from io import StringIO as BytesIO
 
 # Global section
 # charging endpoint
